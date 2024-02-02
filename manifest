@@ -1,0 +1,12 @@
+: 1
+name: anyany
+version: 0.1.0-a.0.z
+type: lib,binless
+language: c++
+summary: Library for efficient dynamic polymorphism through type erasure(C++17 or later)
+license: Apache-2.0 ; Apache License 2.0.
+description-file: README.md
+url: https://example.org/AnyAny
+email: cjangus@gmail.com
+depends: * build2 >= 0.16.0
+depends: * bpkg >= 0.16.0
