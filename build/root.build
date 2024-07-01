@@ -2,11 +2,15 @@
 #
 #cxx.internal.scope = current
 
+config [bool]    config.anyany.enable_modules				 ?= false
+
 cxx.std = latest
+cxx.features.modules = $config.anyany.enable_modules
 
 using cxx
 
 hxx{*}: extension = hpp
+mxx{*}: extension = mxx
 cxx{*}: extension = cpp
 
 # The test target for cross-testing (running tests under Wine, etc).
