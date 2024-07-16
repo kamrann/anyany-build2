@@ -1,4 +1,7 @@
-liba{anyany}: include/hxx{**} hxx{version} include/anyany/mxx{anyany}
+lib{anyany}: include/hxx{**} hxx{version} include/anyany/mxx{anyany}
+{
+  bin.binless = true
+}
 
 hxx{version}: in{version} $src_root/manifest
 
@@ -8,7 +11,7 @@ cxx.poptions =+ "-I$out_root" "-I$src_base/include"
 
 # Export options.
 #
-liba{anyany}:
+lib{anyany}:
 {
   cxx.export.poptions = "-I$out_root" "-I$src_base/include"
 }
